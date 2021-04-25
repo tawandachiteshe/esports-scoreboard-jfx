@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #373737;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.dickens.PrimaryController">
+   <children>
+      <Text fx:id="gameName" fill="WHITE" layoutX="390.0" layoutY="84.0" onMouseClicked="#changeGameName" strokeType="OUTSIDE" strokeWidth="0.0" text="MK 11" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="500.0" AnchorPane.bottomAnchor="598.5999984741211" AnchorPane.leftAnchor="390.0" AnchorPane.rightAnchor="390.0" AnchorPane.topAnchor="46.599998474121094">
+         <font>
+            <Font name="FreeSans" size="68.0" />
+         </font>
+      </Text>
+      <Text fx:id="counterLeft" boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="107.0" layoutY="287.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" style="-fx-font-size: 100 px; -fx-font-family: url();" text="10" textAlignment="JUSTIFY" textOrigin="CENTER" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="107.0" AnchorPane.rightAnchor="950.6000061035156" AnchorPane.topAnchor="177.0">
+         <font>
+            <Font name="FreeSans" size="200.0" />
+         </font>
+      </Text>
+      <Text fx:id="counterRight" boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="947.0" layoutY="287.0" nodeOrientation="LEFT_TO_RIGHT" strokeType="OUTSIDE" strokeWidth="0.0" text="10" textAlignment="CENTER" textOrigin="CENTER" AnchorPane.bottomAnchor="323.0" AnchorPane.leftAnchor="947.0" AnchorPane.rightAnchor="110.60000610351562" AnchorPane.topAnchor="177.0">
+         <font>
+            <Font name="FreeSans" size="200.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="182.0" layoutY="461.0" onMouseClicked="#increaseScoreLeft" ripplerFill="WHITE" style="-fx-background-color: #2E86C1;" text="+" />
+      <JFXButton buttonType="RAISED" layoutX="231.0" layoutY="461.0" onMouseClicked="#decreaseScoreLeft" ripplerFill="WHITE" style="-fx-background-color: #E74C3C;" text="-" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+      <Text fx:id="playerNameLeft" boundsType="LOGICAL_VERTICAL_CENTER" fill="WHITE" layoutX="93.0" layoutY="403.0" strokeType="OUTSIDE" strokeWidth="0.0" text="tawas" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="250.0" AnchorPane.bottomAnchor="306.5" AnchorPane.leftAnchor="93.0" AnchorPane.rightAnchor="937.0" AnchorPane.topAnchor="392.5">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Text>
+      <Text fx:id="playerNameRight" fill="WHITE" layoutX="933.0" layoutY="403.0" onMouseClicked="#onNameChangeRight" strokeType="OUTSIDE" strokeWidth="0.0" text="Nyaxa" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="250.0" AnchorPane.bottomAnchor="307.0999994277954" AnchorPane.leftAnchor="933.0" AnchorPane.rightAnchor="97.0" AnchorPane.topAnchor="393.0999994277954">
+         <font>
+            <Font name="FreeSans" size="18.0" />
+         </font>
+      </Text>
+      <JFXButton buttonType="RAISED" layoutX="1022.0" layoutY="461.0" onMouseClicked="#increaseScoreRight" ripplerFill="WHITE" style="-fx-background-color: #2E86C1;" text="+" />
+      <JFXButton buttonType="RAISED" layoutX="1071.0" layoutY="461.0" onMouseClicked="#decreaseScoreRight" ripplerFill="WHITE" style="-fx-background-color: #E74C3C;" text="-" textAlignment="CENTER" textOverrun="CENTER_ELLIPSIS" />
+      <Text fill="WHITE" layoutX="607.0" layoutY="374.0" strokeType="OUTSIDE" strokeWidth="0.0" text="-" textAlignment="RIGHT" AnchorPane.leftAnchor="607.0">
+         <font>
+            <Font name="FreeSans" size="200.0" />
+         </font>
+      </Text>
+      <JFXListView fx:id="savedMatchesList" layoutX="15.0" layoutY="582.0" prefHeight="124.0" prefWidth="1250.0" style="-fx-background-color: #353535;" verticalGap="2.0" />
+      <JFXButton buttonType="RAISED" layoutX="593.0" layoutY="509.0" onMouseClicked="#saveMatch" ripplerFill="WHITE" style="-fx-background-color: #2E86C1;" text="Save Match" textFill="WHITE" />
+      <JFXButton buttonType="RAISED" layoutX="36.0" layoutY="547.0" onMouseClicked="#refreshList" ripplerFill="WHITE" style="-fx-background-color: #2E86C1;" text="Refresh List" textFill="WHITE" />
+      <JFXButton layoutX="195.0" layoutY="423.0" prefHeight="28.0" prefWidth="0.0" ripplerFill="#fffefe" text=" " />
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="23.0" layoutX="208.0" layoutY="427.0" onMouseClicked="#onNameChangeLeft" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-create-100.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="20.0" fitWidth="23.0" layoutX="1048.0" layoutY="427.0" onMouseClicked="#onNameChangeRight" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-create-100.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+      <ImageView accessibleRole="BUTTON" fitHeight="43.0" fitWidth="41.0" layoutX="620.0" layoutY="143.0" onMouseClicked="#changeGameName" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../icons/icons8-create-100.png" />
+         </image>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </ImageView>
+   </children>
+</AnchorPane>
